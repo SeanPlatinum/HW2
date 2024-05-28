@@ -1,0 +1,118 @@
+/*Sean Diaz sean_diaz@student.uml.edu
+File: Pacific.css
+GUI Programming assignment 2 - Wenjin Zhou
+Copyright (c) 2024 by Sean.  All rights reserved.  May be freely copied or excerpted for educational purposes with credit to the author. 
+updated by SD on May 27th, 2024 at 7:52 PM 
+
+problems with assignment: To be honest for the passed few days ive been stuck trying to come up with ways on how to position these 
+elements where they should be, and for that I expect to lose some points as I definetly could not originally find a way to do this without
+absolutely positioning the nav bar. I got very far using inline block and block elements however one thing caused me to just accept the 
+fact that I couldn't get it to work propely otherwise: The Nav Bar. IT WOULD NOT TAKE UP THE ENTIRE BODY. I could give it a custom height 
+however it wouldn't dynamically change with the window shrinking. So either it would only be a small box, or it would 
+be statically sized and would look weird. Using absolute positioning saved me here...I had to make a choice,
+either have the navbar ruin the site without absolute positioning or use abosulte and relative positioning. 
+Also: had issues with alligning the marker gif icons with paragraph without messing up the wrapping from the image.
+A big challenge: 
+I think my biggest challenge is the fact you cant alter the html at all. Normally I would use flex box...I LOVE FLEX!!!
+however i've been too accustomed to just making new div's when my flex box elements needing adjustments 
+
+Overall: I really enjoyed this challenge, However I WOULD LOVE to have an explanation as to how you can do this without absolute positioning
+
+*/
+body {
+    background: url('ptrbackground.jpg') repeat; /* makes the gradient repeat across the whole screen, basically the image is small but with repitition it will repeat to fill the screen */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#wrapper {
+    background-color: white; 
+    margin: 50px auto; /* Center the wrapper and add top/bottom margin */
+    width: 80%; /* Set the width to 80% of the page width */
+    min-width: 600px; /* Ensure the minimum width is 600px */
+    overflow: hidden; /* Ensure the wrapper contains floated elements */
+    position: relative;
+    
+}
+
+img{
+    float:left;
+    margin-right: 20px;
+}
+nav {
+    float: left;
+    width: 200px;
+    background-color: #90c8e3;
+    margin-right: 25px;
+    height: 100%; /* Make nav fill the height of the wrapper */
+    position: absolute; /* Position nav to the left */
+    text-decoration: none; 
+}
+
+#content {
+    margin-left: 225px; /* Adjust content position to account for nav */
+    padding: 20px;
+    overflow: hidden; /* Clear floats inside content */
+}
+#content span.resort{
+    color: #3399CC;
+    font-size: 17px;
+    font-weight: bold;
+
+}
+nav ul{
+    font-size: 1.2em;
+    font-weight: bold;
+    list-style: none;
+    text-decoration: none;
+    justify-content: center;
+   
+}
+a {
+    text-decoration: none; /* Remove underline from links */
+}
+
+ul{
+    list-style-image: url('marker.gif'); /* at first this confused me because I didnt get why it says "url" just a little side note*/
+}
+nav a:visited {
+    color: #344873;
+}
+
+nav a:hover {
+    color: #FFFFFF;
+}
+
+header {
+    background: url('sunset.jpg') no-repeat center; /* no repeat because we want it to cover everything anyway*/
+    background-size: cover; /* Scales the image to cover the entire element */
+    color: white;
+    padding: 10px 20px;
+}
+
+h1 {
+    margin: 10px; /*makes title slightly bigger*/
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+h2 {
+    color: #3399CC;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+#contact {
+    font-size: 90%;
+}
+
+dt {
+    color: #000033;
+}
+
+footer {
+    font-family: Georgia, "Times New Roman", serif;
+    padding-bottom: 10px;
+    font-style: italic;
+    font-size: 13px;
+    margin-top: 70px;
+    overflow: hidden;
+    margin-left: 225px; /* Adjust footer position to account for nav */
+}
